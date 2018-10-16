@@ -1,0 +1,291 @@
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  /* make things invisible upon start */
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.25s;
+  -moz-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay:0.5s;
+  animation-delay: 0.5s;
+}
+
+body {
+    color: #ff6699;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+    background-color: black;
+    text-align: center;
+}
+
+h1 {
+    display: block;
+    font-size: 5em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
+
+a:link {
+    color: #ff6699;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ff6699;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:active {
+    color: #ff6699;
+    text-decoration: none;
+}
+
+input[type=text], select {
+    background-color: black;
+    width: 100%;
+    padding: 1.5% 1.5%;
+    margin: 2% 0;
+    display: inline-block;
+    border: 1px solid #ff6699;
+    font-size: 0.8em;
+    color: #ff6699;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+textarea, select {
+    background-color: black;
+    width: 100%;
+    padding: 1.5% 1.5%;
+    margin: 2% 0;
+    display: inline-block;
+    border: 1px solid #ff6699;
+    font-size: 0.8em;
+    color: #ff6699;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    width: 50%;
+    height: 2.5em;
+    background-color: #ff6699;
+    color: black;
+    font-size: 1em;
+    margin: 1% 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+button[type=submit]:hover {
+    background-color: #ffffff;
+}
+
+.content-head {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-content: space-evenly;
+    align-items: center;
+    padding: 0 10% 0;
+}
+
+.content {
+    width: 80%;
+    height: 100%;
+    padding: 0 10% 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.content-half {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.container {
+    width: 95%;
+    display: block;
+    text-align: left;
+}
+
+.thumb {
+    padding: 2%;
+}
+
+.thumb > img {
+    width: 70%;
+    border: 1px solid #ff6699;
+}
+
+
+/* NAVIGATION BAR - PRIMARY */
+
+.navbar {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    padding: 0.4%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.navbar > div {
+    font-size: 1em;
+    margin: 0 2% 0;
+}
+
+.navbar > div > a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar > div > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar > div > a:hover {
+    color: #ff6699;
+    text-decoration: none;
+}
+
+.navbar > div > a:active {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* SOCIAL MEDIA FOOTER */
+
+.socialbar {
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    max-width: 20%;
+    margin: 20px 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialbar > div {
+    margin: 0 6% 0;
+}
+
+.socialbar > div > a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.socialbar > div > a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.socialbar > div > a:hover {
+    color: #ff6699;
+    text-decoration: none;
+}
+
+.socialbar > div > a:active {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 870px) {
+    h1 {
+        display: block;
+        font-size: 3.25em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        font-weight: bold;
+    }
+    
+    h2 {
+        display: block;
+        font-size: 1.2em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body { 
+        font-size: 14px;
+    }
+    .content {
+        display: block;
+        height: auto;
+        padding: 6% 10%;
+    }
+    .content-half {
+        width: 100%;
+        margin: 4% 0 8%;
+    }
+}

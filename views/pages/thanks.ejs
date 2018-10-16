@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body>
+
+  <header>
+    <% include ../partials/nav %>
+  </header>
+
+  <main>
+    <div class='content fade-in one'></div>
+      Thank you <%= contact.name %>.
+    </div>
+  </main>
+
+  <footer>
+    <% include ../partials/social %>
+  </footer>
+
+</body>
+
+<script>
+  setTimeout(function () {
+    // after 2 seconds
+    window.location = '/';
+  }, 6000)
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<html>
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body>
+
+  <header>
+    <% include ../partials/nav %>
+  </header>
+
+  <main>
+    <div class='content'>
+      <div class='content-half fade-in one'>
+        <div class='container'>
+          <h2 style='margin-block-start: 0; margin-block-end: 0'>Contact Robert</h2>
+          <p>All proposals, commissions, and inqueries are welcome.
+            <br>
+            <br>
+            Reach out via the contact forum
+            or all accross the internet:
+            <a href='https://linkedin.com/in/robertwrithe/'>LinkedIn</a>,
+            <a href='https://github.com/robertwrithe'>Github</a>, <a href='https://twitter.com/robertmakes'>Twitter</a>,
+            <a href='https://instagram.com/robertmakes'>Instagram (illustration focused)</a></p>
+        </div>
+        <img src='/css/mail-icon.png' width='25%'>
+      </div>
+      <div class='content-half fade-in two'>
+        <div class='container'>
+          <form action='/thanks' method='POST'>
+            <label for='name'>Name</label><br>
+            <input id='name' name='name' type='text'><br>
+            <label for='email'>Email</label><br>
+            <input id='email' name='email' type='text'><br>
+            <label for='message'>Message</label><br>
+            <!-- <select
+            name='reason'
+            id='reason'>
+              <option value='' hidden>Reason For Contacting</option>
+              <option value='Software-Web Developement'>Software/Web Developement</option>
+              <option value='Illustration'>Illustration</option>
+              <option value='Music'>Music</option>
+              <option value='Other'>Other</option>
+            </select> -->
+            <textarea id='message' name='message' rows='3'></textarea><br>
+            <button type='submit'>Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <% include ../partials/social %>
+  </footer>
+
+</body>
+
+</html>

@@ -11,12 +11,12 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('./css', express.static('css'));
+app.use('../css', express.static('css'));
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // The views directory is set ('./views')
 // where the template files will be located
-app.set('views', './views');
+app.set('views', '../views');
 
 // The default engine is set to ejs
 app.set('view engine', 'ejs');

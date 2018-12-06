@@ -11,7 +11,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/css', express.static('css'));
+app.use('/static', express.static('static'));
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // The views directory is set ('./views')
@@ -42,10 +42,16 @@ app.get('/developer', (req, res) => {
     res.render('pages/developer');
 });
 
-// // resume
-// app.get('/resume', (req, res) => {
-//     res.render('resume.pdf');
-// });
+// resume
+app.get('/resume', (req, res) => {
+    res.sendFile('resume.pdf', {root: './static'})
+});
+
+app.get('/user/:uid/files/*', function(req, res){
+    var uid = req.params.uid,
+        path = req.params[0] ? req.params[0] : 'index.html';
+    res.sendfile(path, {root: './public'});
+});
 
 // contact page
 app.get('/contact', (req, res) => {
